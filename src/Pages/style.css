@@ -206,13 +206,12 @@ body {
 }
 
 /* Section */
-
-section {
+.container-section-content {
   background: #8874e0;
-  height: 600px;
+  height: 400px;
 }
 
-section h2 {
+.container-section-content h2 {
   font-family: "Bungee", cursive;
   text-align: center;
   color: white;
@@ -232,7 +231,11 @@ section h2 {
   text-align: center;
   font-family: "Fredoka", sans-serif;
   color: white;
-  padding: 1%;
+}
+
+.single-container:hover {
+  transition: 0.3s ease-out;
+  transform: translateY(5px);
 }
 
 .title {
