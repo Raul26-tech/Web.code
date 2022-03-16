@@ -8,8 +8,16 @@
 
 :root {
   --theme--header: linear-gradient(to right, #0c013d, rgba(13, 1, 77, 0.8));
+  --theme--content: #8874e0;
   --color--title: rgba(13, 1, 77, 0.8);
   --color--latters: rgba(66, 54, 131, 0.8);
+  --color--button--submit: linear-gradient(
+    to right,
+    #0c013d,
+    rgba(38, 25, 112, 0.8)
+  );
+  --color--border: rgba(66, 54, 131, 0.8);
+  --fonts--titles--content: "Poppins", sans-serif;
 }
 
 html,
@@ -24,9 +32,9 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
   position: absolute;
-  top: -5%;
+  top: -7.5%;
   left: 5%;
 }
 
@@ -35,7 +43,7 @@ body {
 }
 
 .center {
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -54,32 +62,33 @@ body {
 
 .form {
   width: 400px;
-  height: calc(100% + 30px);
-  background: rgba(255, 255, 255);
+  height: 557px;
+  background: rgba(113, 98, 204, 0.5);
   float: right;
   margin: 0 30px;
-  position: relative;
   top: -15px;
-  border-radius: 5px;
   padding: 15px;
 }
 
 .form h2 {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Bungee", cursive;
-  color: rgba(13, 1, 77, 0.8);
+  color: white;
+  border: rgba(113, 98, 204);
   text-align: left;
 }
 
 .input-container {
   margin-top: 20px;
+  padding: 4%;
 }
 
 .input-container span {
-  font-family: "Bungee", cursive;
-  font-size: 10px;
-  color: var(--color--title);
+  font-family: "Poppins", cursive;
+  font-size: 16px;
+  color: rgb(143, 127, 236);
+  border: #000000;
 }
 
 .input-container input {
@@ -88,11 +97,13 @@ body {
   height: 30px;
   padding: 1%;
   color: var(--color--latters);
+  border: none;
+  border-radius: 5px;
   border-color: 1px rgb(57, 40, 151);
 }
 
 .input-container input:hover {
-  box-shadow: 1px 1px 10px rgb(57, 40, 151, 0.5);
+  box-shadow: 1px 1px 10px rgba(235, 234, 243, 0.5);
   border-style: none;
 }
 
@@ -101,13 +112,143 @@ body {
 }
 
 .warning {
-  margin: 15px 50px 15px 0;
-  font-family: "Hubballi", cursive;
-  font-size: 14px;
-  color: rgb(57, 40, 151, 0.5);
+  text-align: center;
+  font-family: "Poppins", cursive;
+  font-size: 16px;
+  color: rgb(129, 109, 240);
 }
 
 .input-submit-container {
   width: 280px;
   height: 56px;
+  color: white;
+  font-size: 16px;
+  background: var(--color--button--submit);
+  font-family: "Bungee", cursive;
+  margin: 40px 30px 5px 45px;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.input-submit-container:active {
+  transition: 0.5s;
+  transform: translateY(5px);
+}
+
+/* Container list */
+
+.container-list {
+  float: left;
+  width: 620px;
+  height: 270px;
+  background: rgba(66, 54, 131, 0.6);
+  margin: 80px 30px 15px 20px;
+  padding: 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container-list:hover {
+  width: 650px;
+  height: 290px;
+  box-shadow: 5px 10px 15px rgba(66, 54, 131, 0.8);
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.container-list ul {
+  list-style-position: inside;
+  list-style: none;
+}
+
+.container-list ul li {
+  margin-top: 20px;
+  color: aliceblue;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-section {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.container-section h2 {
+  margin: 0 15px;
+}
+
+.container-section p {
+  padding: 2%;
+  text-align: center;
+  font-size: 18px;
+  font-family: var(--fonts--titles--content);
+}
+
+.title-center {
+  font-family: "Bungee", cursive;
+  color: var(--color--latters);
+}
+
+.arrow {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-image: url("../assets/iconArrow.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 45px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* Section */
+
+section {
+  background: #8874e0;
+  height: 600px;
+}
+
+section h2 {
+  font-family: "Bungee", cursive;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.title-page {
+  padding: 50px 0;
+  font-family: "Bungee", cursive;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.single-container {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  color: white;
+  padding: 1%;
+}
+
+.title {
+  text-align: center;
+  padding: 5px;
+  font-weight: 300;
+}
+
+.icon-laptop {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-image: url("../assets/laptop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 5px;
+  left: 50%;
+  margin-left: -30px;
 }
