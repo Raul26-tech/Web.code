@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --theme--header: linear-gradient(to right, #0c013d, rgba(13, 1, 77, 0.8));
+  --color--title: rgba(13, 1, 77, 0.8);
+  --color--latters: rgba(66, 54, 131, 0.8);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background: var(--theme--header);
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: -5%;
+  left: 5%;
+}
+
+.header img {
+  margin: 15px;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-banner {
+  width: 100%;
+  height: 557px;
+  background-image: url(../assets/bg4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-banner > .center {
+  height: 100%;
+}
+
+.form {
+  width: 400px;
+  height: calc(100% + 30px);
+  background: rgba(255, 255, 255);
+  float: right;
+  margin: 0 30px;
+  position: relative;
+  top: -15px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.form h2 {
+  font-weight: normal;
+  font-size: 12px;
+  font-family: "Bungee", cursive;
+  color: rgba(13, 1, 77, 0.8);
+  text-align: left;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.input-container span {
+  font-family: "Bungee", cursive;
+  font-size: 10px;
+  color: var(--color--title);
+}
+
+.input-container input {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  padding: 1%;
+  color: var(--color--latters);
+  border-color: 1px rgb(57, 40, 151);
+}
+
+.input-container input:hover {
+  box-shadow: 1px 1px 10px rgb(57, 40, 151, 0.5);
+  border-style: none;
+}
+
+.input-container input:valid {
+  border-style: hidden;
+}
+
+.warning {
+  margin: 15px 50px 15px 0;
+  font-family: "Hubballi", cursive;
+  font-size: 14px;
+  color: rgb(57, 40, 151, 0.5);
+}
+
+.input-submit-container {
+  width: 280px;
+  height: 56px;
+}
