@@ -35,7 +35,7 @@ body {
 .header {
   width: 100%;
   padding: 0 2%;
-  height: 60px;
+  height: 100px;
   background: var(--theme--header);
 }
 
@@ -44,6 +44,7 @@ body {
   position: absolute;
   top: -7.5%;
   left: 5%;
+  background-size: 100% 100%;
 }
 
 .header img {
@@ -65,6 +66,7 @@ body {
 }
 
 .form {
+  color: rgb(199, 192, 238);
   width: 400px;
   height: 557px;
   background: rgba(113, 98, 204, 0.5);
@@ -72,6 +74,7 @@ body {
   margin: 0 30px;
   top: -15px;
   padding: 15px;
+  position: relative;
 }
 
 .form h2 {
@@ -145,7 +148,7 @@ body {
 
 .container-list {
   float: left;
-  width: 620px;
+  width: 100%;
   height: 270px;
   background: rgba(66, 54, 131, 0.6);
   margin: 80px 10px 15px 20px;
@@ -155,13 +158,13 @@ body {
   text-align: center;
 }
 
-.container-list:hover {
+/* .container-list:hover {
   width: 640px;
   height: 290px;
   box-shadow: 5px 10px 15px rgba(66, 54, 131, 0.8);
   text-align: center;
   transition: 0.5s ease-in-out;
-}
+} */
 
 .container-list ul {
   list-style-position: inside;
@@ -187,6 +190,7 @@ body {
 
 .container-section p {
   width: 100%;
+  max-width: 768px;
   text-align: justify;
   display: inline-block;
   margin: 15px 0;
@@ -214,7 +218,7 @@ body {
 /* Section */
 .container-section-content {
   background: #8874e0;
-  height: 400px;
+  height: 500px;
 }
 
 .container-section-content h2 {
@@ -271,4 +275,87 @@ body {
   font-family: "Fredoka", sans-serif;
   background: var(--theme--header);
   color: white;
+}
+
+/* CReate midia Queries */
+
+@media screen and (max-width: 1024px), screen and (min-width: 1024px) {
+  .header {
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .header img {
+    margin: 0;
+  }
+
+  .logo {
+    width: 100px;
+    top: -3%;
+  }
+
+  .container-banner {
+    padding: 40px 2%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .container-list {
+    font-size: 14px;
+    padding: auto;
+    float: none;
+    display: inline-block;
+    width: 40%;
+    max-width: 550px;
+    height: auto;
+    text-align: center;
+  }
+
+  .form {
+    max-width: 400px;
+    width: 60%;
+    text-align: center;
+    height: auto;
+    float: none;
+    display: inline-block;
+    top: 0;
+    padding: 10px;
+  }
+
+  .input-submit-container {
+    align-items: center;
+    max-width: 150px;
+    width: 100%;
+    height: 56px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container-list {
+      margin-top: 0;
+      float: none;
+      display: inline-block;
+      margin-left: -4px;
+      width: 100%;
+    }
+
+    .form {
+      float: none;
+      display: inline-block;
+      width: 90%;
+      margin-top: 30px;
+    }
+
+    .single-container {
+      width: 100%;
+      max-width: 600px;
+      padding: 30px 0;
+    }
+
+    .container-section-content {
+      height: 830px;
+    }
+  }
 }
